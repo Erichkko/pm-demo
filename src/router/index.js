@@ -6,13 +6,20 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+
     {
       path: '/login',
       component: resolve=>require(['../components/page/Login.vue'],resolve)
     } ,
     {
       path: '/',
-      component: resolve=>require(['../components/page/Dashboard.vue'],resolve)
+      component: resolve=>require(['../components/common/Home.vue'],resolve),
+      meta: { title: '自述文件' },
+      children:[{
+        path: '/dashboard',
+        component: resolve=>require(['../components/page/Dashboard.vue'],resolve),
+        meta: { title: '系统首页' }
+      },]
     }
   ]
 })
