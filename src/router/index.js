@@ -9,6 +9,10 @@ export default new Router({
     {
       path: '/login',
       component: resolve=>require(['../components/page/Login.vue'],resolve)
+    } ,
+    {
+      path: '/',
+      component: resolve=>require(['../components/page/Dashboard.vue'],resolve)
     }
   ]
 })
