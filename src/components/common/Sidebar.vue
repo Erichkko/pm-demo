@@ -36,12 +36,7 @@
             {
               icon: 'el-icon-setting',
               index: 'dashboard',
-              title: '系统首页',
-              subs: [
-                {
-                  index: 'form',
-                  title: '基本表单'
-                }]
+              title: '系统首页'
             },
             {
               icon: 'el-icon-tickets',

@@ -6,7 +6,10 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-
+    {
+      path: '/',
+      redirect: '/dashboard'
+    },
     {
       path: '/login',
       component: resolve=>require(['../components/page/Login.vue'],resolve)
@@ -19,7 +22,12 @@ export default new Router({
         path: '/dashboard',
         component: resolve=>require(['../components/page/Dashboard.vue'],resolve),
         meta: { title: '系统首页' }
-      },]
+      },{
+        path: '/404',
+        component: resolve=>require(['../components/page/404.vue'],resolve),
+        meta: { title: '404' }
+      },
+      ]
     }
   ]
 })
