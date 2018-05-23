@@ -26,6 +26,10 @@ export default new Router({
         path: '/404',
         component: resolve=>require(['../components/page/404.vue'],resolve),
         meta: { title: '404' }
+      },{
+        path: '/table',
+        component: resolve=>require(['../components/page/BaseTable.vue'],resolve),
+        meta: { title: '基础表格' }
       },
       ]
     }
