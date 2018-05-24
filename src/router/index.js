@@ -30,6 +30,10 @@ export default new Router({
         path: '/table',
         component: resolve=>require(['../components/page/BaseTable.vue'],resolve),
         meta: { title: '基础表格' }
+      },{
+        path: '/tabs',
+        component: resolve=>require(['../components/page/TabCards.vue'],resolve),
+        meta: { title: '选项卡' }
       },
       ]
     }
