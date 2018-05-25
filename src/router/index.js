@@ -27,6 +27,10 @@ export default new Router({
         component: resolve=>require(['../components/page/404.vue'],resolve),
         meta: { title: '404' }
       },{
+        path: '/403',
+        component: resolve=>require(['../components/page/403.vue'],resolve),
+        meta: { title: '403' }
+      },{
         path: '/table',
         component: resolve=>require(['../components/page/BaseTable.vue'],resolve),
         meta: { title: '基础表格' }
@@ -34,6 +38,10 @@ export default new Router({
         path: '/tabs',
         component: resolve=>require(['../components/page/TabCards.vue'],resolve),
         meta: { title: '选项卡' }
+      },{
+        path: '/permission',
+        component: resolve=>require(['../components/page/PermissonTest.vue'],resolve),
+        meta: { title: '权限测试', permission: true }
       },
       ]
     }

@@ -14,7 +14,9 @@ Vue.config.productionTip = false
 
 //使用钩子函数对路由进行权限跳转
 router.beforeEach((to, from, next) => {
+  console.log('to path =='+to.path)
   const role = localStorage.getItem('ms_username');
+  console.log('role =='+role)
   if(!role && to.path !== '/login'){
     next('/login');
   }else if(to.meta.permission){
